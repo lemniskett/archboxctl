@@ -1,6 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 SYSTEMD_UNITS_DIR="/usr/lib/systemd/system"
+PATH="/usr/bin"
 
 parse_exec() {
     where=$(grep --color=never "Exec$1=" /tmp/archbox/exec \
