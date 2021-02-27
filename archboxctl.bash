@@ -46,6 +46,7 @@ case $1 in
     exec)
         asroot
         [[ -z $2 ]] && err "Expected an argument"
+        mkdir /tmp/archbox -p
         cp $SYSTEMD_UNITS_DIR/$2.service /tmp/archbox/exec
         sed -i '/#/d' /tmp/archbox/exec
         mkdir -p /var/log/archboxctl/$2
